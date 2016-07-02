@@ -1,5 +1,3 @@
-package math1.cw.hs.kr.math1;
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.HashMap;

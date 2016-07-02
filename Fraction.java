@@ -1,7 +1,3 @@
-package math1.cw.hs.kr.math1;
-
-import android.util.Log;
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -12,8 +8,8 @@ public class Fraction {
     protected BigInteger num;
     protected BigInteger denom;
 
-    public static Fraction ONE = new Fraction(BigInteger.ONE, BigInteger.ONE);
-    public static Fraction ZERO = new Fraction(BigInteger.ZERO, BigInteger.ONE);
+    public static final Fraction ONE = new Fraction(BigInteger.ONE, BigInteger.ONE);
+    public static final Fraction ZERO = new Fraction(BigInteger.ZERO, BigInteger.ONE);
 
     public Fraction(BigInteger num, BigInteger denom) {
         BigInteger gcd = denom.gcd(num);
@@ -64,7 +60,7 @@ public class Fraction {
     }
 
     public String toMathString() {
-        return "{"+num.toString()+(denom.compareTo(BigInteger.ONE) != 0 ? "\\over "+denom.toString() : "")+"}";
+        return "{"+num.toString()+(denom.compareTo(BigInteger.ONE) != 0 ? " \\over "+denom.toString() : "")+"}";
     }
 
     public Fraction inverse() {

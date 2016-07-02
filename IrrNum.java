@@ -1,5 +1,3 @@
-package math1.cw.hs.kr.math1;
-
 import java.math.BigInteger;
 
 /**
