@@ -9,8 +9,8 @@ import java.math.BigInteger;
  * Created by Administrator on 2016-06-25.
  */
 public class Fraction {
-    BigInteger num;
-    BigInteger denom;
+    protected BigInteger num;
+    protected BigInteger denom;
 
     public static Fraction ONE = new Fraction(BigInteger.ONE, BigInteger.ONE);
     public static Fraction ZERO = new Fraction(BigInteger.ZERO, BigInteger.ONE);
@@ -60,7 +60,7 @@ public class Fraction {
     }
 
     public String toString() {
-        return num.toString() + "/" + String.valueOf(denom);
+        return num.toString() + "/" + denom.toString();
     }
 
     public String toMathString() {
@@ -89,6 +89,14 @@ public class Fraction {
 
     public Fraction pow(int a) {
         return new Fraction(num.pow(a), denom.pow(a));
+    }
+
+    public BigInteger getDenom() {
+        return denom;
+    }
+
+    public BigInteger getNum() {
+        return num;
     }
 
     public BigDecimal toBigDecimal() {
